@@ -34,6 +34,12 @@ public interface ValidationContext {
 	String resolveNamespacePrefix( String prefix );
 
 	/**
+	 * Returns the base URI of the context.  The null string may be returned
+	 * if no base URI is known.
+	 */
+	String getBaseUri();
+
+	/**
 	 * Checks if an unparsed entity is declared with the
 	 * specified name.
 	 * 
