@@ -13,6 +13,9 @@ import org.relaxng.datatype.*;
  * <PRE><XMP>
  * class MyDatatypeLibrary implements DatatypeLibrary {
  *     ....
+ *     DatatypeBuilder createDatatypeBuilder( String typeName ) {
+ *         return new ParameterleessDatatypeBuilder(createDatatype(typeName));
+ *     }
  *     ....
  * }
  * </XMP></PRE>
@@ -30,7 +33,7 @@ public final class ParameterlessDatatypeBuilder implements DatatypeBuilder {
 	
 	public void addParameter( String name, String strValue, ValidationContext context )
 			throws DatatypeException {
-		throw new DatatypeException("parameter is not supported");
+		throw new DatatypeException();
 	}
 	
 	public Datatype createDatatype() throws DatatypeException {
