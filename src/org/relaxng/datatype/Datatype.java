@@ -15,7 +15,7 @@ package org.relaxng.datatype;
  *  <li> functionality to test the equality of two value objects.
  * </ol>
  * 
- * This interface also defines an optional createStreamingValidator method,
+ * This interface also defines the createStreamingValidator method,
  * which is intended to efficiently support the validation of
  * large character sequences.
  * 
