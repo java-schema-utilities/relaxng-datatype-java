@@ -5,6 +5,7 @@ import org.relaxng.datatype.*;
 /**
  * Dummy implementation of {@link DatatypeStreamingValidator}.
  * 
+ * <p>
  * This implementation can be used as a quick hack when the performance
  * of streaming validation is not important. And this implementation
  * also shows you how to implement the DatatypeStreamingValidator interface.
@@ -21,17 +22,17 @@ import org.relaxng.datatype.*;
  * }
  * </XMP></PRE>
  * 
- * @author <a href="mailto:kohsuke.kawaguchi@eng.sun.com">Kohsuke KAWAGUCHI</a>
+ * @author <a href="mailto:kohsuke.kawaguchi@sun.com">Kohsuke KAWAGUCHI</a>
  */
 public final class StreamingValidatorImpl implements DatatypeStreamingValidator {
 	
-	/** this buffer accumulates characters. */
+	/** This buffer accumulates characters. */
 	private final StringBuffer buffer = new StringBuffer();
 	
 	/** Datatype obejct that creates this streaming validator. */
 	private final Datatype baseType;
 	
-	/** the current context. */
+	/** The current context. */
 	private final ValidationContext context;
 	
 	public void addCharacters( char[] buf, int start, int len ) {

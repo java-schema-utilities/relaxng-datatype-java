@@ -4,12 +4,12 @@ package org.relaxng.datatype;
  * A Datatype library
  * 
  * @author <a href="mailto:jjc@jclark.com">James Clark</a>
- * @author <a href="mailto:kohsuke.kawaguchi@eng.sun.com">Kohsuke KAWAGUCHI</a>
+ * @author <a href="mailto:kohsuke.kawaguchi@sun.com">Kohsuke KAWAGUCHI</a>
  */
 public interface DatatypeLibrary {
 	
 	/**
-	 * creates a new instance of DatatypeBuilder.
+	 * Creates a new instance of DatatypeBuilder.
 	 * 
 	 * The callee should throw a DatatypeException in case of an error.
 	 * 
@@ -23,9 +23,10 @@ public interface DatatypeLibrary {
 		throws DatatypeException;
 	
 	/**
-	 * gets or creates a pre-defined type.
+	 * Gets or creates a pre-defined type.
 	 * 
-	 * This is just a short-cut of createDatatypeBuilder(name).createDatatype();
+	 * This is just a short-cut of
+	 * <code>createDatatypeBuilder(name).createDatatype();</code>
 	 * 
 	 * The callee should throw a DatatypeException in case of an error.
 	 * 

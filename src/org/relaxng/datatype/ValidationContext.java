@@ -1,19 +1,19 @@
 package org.relaxng.datatype;
 
 /**
- * an interface that must be implemented by caller to
+ * An interface that must be implemented by caller to
  * provide context information that is necessary to 
  * perform validation of some Datatypes.
  * 
  * @author <a href="mailto:jjc@jclark.com">James Clark</a>
- * @author <a href="mailto:kohsuke.kawaguchi@eng.sun.com">Kohsuke KAWAGUCHI</a>
+ * @author <a href="mailto:kohsuke.kawaguchi@sun.com">Kohsuke KAWAGUCHI</a>
  */
 public interface ValidationContext {
 	
 	/**
-	 * resolves a namespace prefix to the corresponding namespace URI.
+	 * Resolves a namespace prefix to the corresponding namespace URI.
 	 * 
-	 * this method is used for validating QName, for example.
+	 * This method is used for validating QName, for example.
 	 *
 	 * <p>
 	 * If the prefix is "" (empty string), it indicates

@@ -17,11 +17,11 @@ import org.relaxng.datatype.*;
  * }
  * </XMP></PRE>
  * 
- * @author <a href="mailto:kohsuke.kawaguchi@eng.sun.com">Kohsuke KAWAGUCHI</a>
+ * @author <a href="mailto:kohsuke.kawaguchi@sun.com">Kohsuke KAWAGUCHI</a>
  */
 public final class ParameterlessDatatypeBuilder implements DatatypeBuilder {
 
-	/** this type object is returned for the derive method. */
+	/** This type object is returned for the derive method. */
 	private final Datatype baseType;
 	
 	public ParameterlessDatatypeBuilder( Datatype baseType ) {
