@@ -80,9 +80,6 @@ public interface Datatype {
 	 *		Otherwise, the caller can pass null.
 	 *		The callee may keep a reference to this context object
 	 *		only while the returned streaming validator is being used.
-	 * 
-	 * @exception UnsupportedOperationException
-	 *		if streaming validation is not supported by the callee.
 	 */
 	DatatypeStreamingValidator createStreamingValidator( ValidationContext context );
 	
