@@ -3,21 +3,21 @@ package org.relaxng.datatype;
 /**
  * Datatype object.
  * 
- * This object has the following functionalities:
+ * This object has the following functionality:
  * 
  * <ol>
- *  <li> functionality to identifies a class of character sequences. This is
+ *  <li> functionality to identify a class of character sequences. This is
  *       done through the isValid method.
  * 
- *  <li> functionality to produce "value object" from a character sequence and
- *		 a context information.
+ *  <li> functionality to produce a "value object" from a character sequence and
+ *		 context information.
  * 
  *  <li> functionality to test the equality of two value objects.
  * </ol>
  * 
- * This interface also defines optional createStreamingValidator method,
- * which is supposed to efficiently support the validation of
- * large character sequence.
+ * This interface also defines an optional createStreamingValidator method,
+ * which is intended to efficiently support the validation of
+ * large character sequences.
  * 
  * @author <a href="mailto:jjc@jclark.com">James Clark</a>
  * @author <a href="mailto:kohsuke.kawaguchi@sun.com">Kohsuke KAWAGUCHI</a>
@@ -25,14 +25,14 @@ package org.relaxng.datatype;
 public interface Datatype {
 	
 	/**
-	 * Checks if the specified 'literal' matchs this Datatype
-	 * under the current context.
+	 * Checks if the specified 'literal' matches this Datatype
+	 * with respect to the current context.
 	 * 
 	 * @param literal
 	 *		the lexical representation to be checked.
 	 * @param context
-	 *		If this datatype is context dependent
-	 *		(when the {@link #isContextDependent} method returns true),
+	 *		If this datatype is context-dependent
+	 *		(i.e. the {@link #isContextDependent} method returns true),
 	 *		then the caller must provide a non-null valid context object.
 	 *		Otherwise, the caller can pass null.
 	 * 
@@ -66,23 +66,23 @@ public interface Datatype {
 		throws DatatypeException;
 	
 	/**
-	 * Creates an instance of the streaming validator for this type.
+	 * Creates an instance of a streaming validator for this type.
 	 * 
 	 * <p>
 	 * By using streaming validators instead of the isValid method,
-	 * the caller can avoid keeping the entire string into the memory,
-	 * which is sometimes quite big.
+	 * the caller can avoid keeping the entire string, which is
+	 * sometimes quite big, in memory.
 	 * 
 	 * @param context
-	 *		If this datatype is context dependent
-	 *		(when the {@link #isContextDependent} method returns true),
+	 *		If this datatype is context-dependent
+	 *		(i.e. the {@link #isContextDependent} method returns true),
 	 *		then the caller must provide a non-null valid context object.
 	 *		Otherwise, the caller can pass null.
 	 *		The callee may keep a reference to this context object
-	 *		only during the returned streaming validator is being used.
+	 *		only while the returned streaming validator is being used.
 	 * 
 	 * @exception UnsupportedOperationException
-	 *		if the streaming validation is not supported by the callee.
+	 *		if streaming validation is not supported by the callee.
 	 */
 	DatatypeStreamingValidator createStreamingValidator( ValidationContext context );
 	
@@ -94,11 +94,11 @@ public interface Datatype {
 	 * The caller cannot generally assume that the value object is
 	 * a meaningful Java object. For example, the caller cannot expect
 	 * this method to return <code>java.lang.Number</code> type for
-	 * the "integer" type of XML Schema Part2.
+	 * the "integer" type of XML Schema Part 2.
 	 * 
 	 * <p>
 	 * Also, the caller cannot assume that the equals method and
-	 * the hashCode method of the value object is consistent with
+	 * the hashCode method of the value object are consistent with
 	 * the semantics of the datatype. For that purpose, the sameValue
 	 * method and the valueHashCode method have to be used. Note that
 	 * this means you cannot use classes like
@@ -106,10 +106,10 @@ public interface Datatype {
 	 * 
 	 * <p>
 	 * The returned value object should be used solely for the sameValue
-	 * method.
+	 * and valueHashCode methods.
 	 * 
 	 * @param context
-	 *		If this datatype is context dependent
+	 *		If this datatype is context-dependent
 	 *		(when the {@link #isContextDependent} method returns true),
 	 *		then the caller must provide a non-null valid context object.
 	 *		Otherwise, the caller can pass null.
@@ -121,11 +121,11 @@ public interface Datatype {
 	Object createValue( String literal, ValidationContext context );
 	
 	/**
-	 * Tests the equality of two value objects which was originally
+	 * Tests the equality of two value objects which were originally
 	 * created by the createValue method of this object.
 	 * 
-	 * The bahavior is undefined if objects not created by this type
-	 * is passed. It is the caller's responsibility to ensure that
+	 * The behavior is undefined if objects not created by this type
+	 * are passed. It is the caller's responsibility to ensure that
 	 * value objects belong to this type.
 	 * 
 	 * @return
@@ -136,7 +136,7 @@ public interface Datatype {
 	
 	
 	/**
-	 * computes the hash code for a value object,
+	 * Computes the hash code for a value object,
 	 * which is consistent with the sameValue method.
 	 * 
 	 * @return
@@ -219,7 +219,7 @@ public interface Datatype {
 	 * <p>
 	 * XSD's <code>string</code> and <code>short</code> types
 	 * are examples of context-independent datatypes.
-	 * <code>QName</code> and <code>ENTITY</code> types
+	 * Its <code>QName</code> and <code>ENTITY</code> types
 	 * are examples of context-dependent datatypes.
 	 * 
 	 * <p>
@@ -233,8 +233,8 @@ public interface Datatype {
 	 *		<b>true</b> if this datatype is context-dependent
 	 *		(it needs a context object sometimes);
 	 * 
-	 *		<b>false</b> if this datatype is context-<b>in</b>dependend
-	 *		(it never need a context object).
+	 *		<b>false</b> if this datatype is context-<b>in</b>dependent
+	 *		(it never needs a context object).
 	 */
 	public boolean isContextDependent();
 }

@@ -1,7 +1,7 @@
 package org.relaxng.datatype;
 
 /**
- * Creates an user-defined type by adding parameters to
+ * Creates a user-defined type by adding parameters to
  * the pre-defined type.
  * 
  * @author <a href="mailto:jjc@jclark.com">James Clark</a>
@@ -16,12 +16,12 @@ public interface DatatypeBuilder {
 	 *		The name of the parameter to be added.
 	 * @param strValue
 	 *		The raw value of the parameter. Caller may not normalize
-	 *		this value becuase any white space is potentially significant.
+	 *		this value because any white space is potentially significant.
 	 * @param context
 	 *		The context information which can be used by the callee to
 	 *		acquire additional information. This context object is
 	 *		valid only during this method call. The callee may not
-	 *		keep the reference to this object.
+	 *		keep a reference to this object.
 	 * @exception	DatatypeException
 	 *		When the given parameter is inappropriate for some reason.
 	 *		The callee is responsible to recover from this error.
@@ -37,7 +37,7 @@ public interface DatatypeBuilder {
 	 * 
 	 * @exception DatatypeException
 	 *		DatatypeException must be thrown if the derivation is
-	 *		somehow invalid. For example, required parameter is missing,
+	 *		somehow invalid. For example, a required parameter is missing,
 	 *		etc. The exception should contain a diagnosis message
 	 *		if possible.
 	 */

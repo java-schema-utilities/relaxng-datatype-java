@@ -26,12 +26,12 @@ public interface DatatypeLibrary {
 	 * Gets or creates a pre-defined type.
 	 * 
 	 * This is just a short-cut of
-	 * <code>createDatatypeBuilder(name).createDatatype();</code>
+	 * <code>createDatatypeBuilder(typeLocalName).createDatatype();</code>
 	 * 
 	 * The callee should throw a DatatypeException in case of an error.
 	 * 
 	 * @return
 	 *		A non-null valid datatype object.
 	 */
-	Datatype createDatatype( String localTypeName ) throws DatatypeException;
+	Datatype createDatatype( String typeLocalName ) throws DatatypeException;
 }

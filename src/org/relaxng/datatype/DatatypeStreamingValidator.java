@@ -14,7 +14,7 @@ package org.relaxng.datatype;
 public interface DatatypeStreamingValidator {
 	
 	/**
-	 * Lets a streaming validator process additional literal fragment.
+	 * Passes an additional fragment of the literal.
 	 * 
 	 * <p>
 	 * The application can call this method several times, then call
@@ -24,7 +24,7 @@ public interface DatatypeStreamingValidator {
 	void addCharacters( char[] buf, int start, int len );
 	
 	/**
-	 * Gets if the accumulated literal is valid with respect to
+	 * Tells if the accumulated literal is valid with respect to
 	 * the underlying Datatype.
 	 * 
 	 * @return
@@ -39,7 +39,7 @@ public interface DatatypeStreamingValidator {
 	 * 
 	 * @exception DatatypeException
 	 *		If the callee supports the diagnosis and the accumulated
-	 *		literal is invalid,	then this exception that possibly
+	 *		literal is invalid, then this exception that possibly
 	 *		contains diagnosis information is thrown.
 	 */
 	void checkValid() throws DatatypeException;

@@ -13,18 +13,18 @@ public interface ValidationContext {
 	/**
 	 * Resolves a namespace prefix to the corresponding namespace URI.
 	 * 
-	 * This method is used for validating QName, for example.
+	 * This method is used for validating the QName type, for example.
 	 *
 	 * <p>
 	 * If the prefix is "" (empty string), it indicates
-	 * unprefixed value. The callee
-	 * should resolved it as if it sees an unprefixed
-	 * element, rather than unprefixed attribute.
+	 * an unprefixed value. The callee
+	 * should resolve it as for an unprefixed
+	 * element, rather than for an unprefixed attribute.
 	 * 
 	 * <p>
 	 * If the prefix is "xml", then the callee must resolve
 	 * this prefix into "http://www.w3.org/XML/1998/namespace",
-	 * as defined in the XML Namespace rec.
+	 * as defined in the XML Namespaces Recommendation.
 	 * 
 	 * @return
 	 *		namespace URI of this prefix.
@@ -34,27 +34,27 @@ public interface ValidationContext {
 	String resolveNamespacePrefix( String prefix );
 
 	/**
-	 * checks if an unparsed entity is declared with the
+	 * Checks if an unparsed entity is declared with the
 	 * specified name.
 	 * 
 	 * @return
 	 *  true
-	 *		if DTD has an unparsed entity declaration for
+	 *		if the DTD has an unparsed entity declaration for
 	 *		the specified name.
-	 *	false
-	 *		if otherwise.
+	 *  false
+	 *		otherwise.
 	 */
 	boolean isUnparsedEntity( String entityName );
 
 	/**
-	 * checks if a notation is declared with the
+	 * Checks if a notation is declared with the
 	 * specified name.
 	 * 
 	 * @return
 	 *  true
-	 *		if DTD has a notation declaration with the specified name.
-	 *	false
-	 *		if otherwise.
+	 *		if the DTD has a notation declaration for the specified name.
+	 *  false
+	 *		otherwise.
 	 */
 	boolean isNotation( String notationName );
 }
