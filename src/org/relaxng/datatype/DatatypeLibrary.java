@@ -12,14 +12,12 @@ public interface DatatypeLibrary {
 	 * creates a new instance of DatatypeBuilder.
 	 * 
 	 * The callee should throw a DatatypeException in case of an error.
-	 * If an error is because of the undefined baseTypeLocalName, then
-	 * it can return null instead of throwing an exception.
 	 * 
 	 * @param baseTypeLocalName
 	 *		The local name of the base type.
 	 * 
-	 * @return null
-	 *		The callee can return null if baseTypeLocalName is an undefined name.
+	 * @return
+	 *		A non-null valid datatype object.
 	 */
 	DatatypeBuilder createDatatypeBuilder( String baseTypeLocalName )
 		throws DatatypeException;
@@ -30,11 +28,9 @@ public interface DatatypeLibrary {
 	 * This is just a short-cut of createDatatypeBuilder(name).createDatatype();
 	 * 
 	 * The callee should throw a DatatypeException in case of an error.
-	 * If the error is because of the undefined baseTypeLocalName, then
-	 * it can return null instead of throwing an exception.
 	 * 
-	 * @return null
-	 *		The callee can return null if localTypeName is an undefined name.
+	 * @return
+	 *		A non-null valid datatype object.
 	 */
 	Datatype createDatatype( String localTypeName ) throws DatatypeException;
 }
