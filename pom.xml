@@ -13,8 +13,8 @@
     <url>http://github.com/java-schema-utilities/relaxng-datatype</url>
     <packaging>jar</packaging>
     <scm>
-        <connection>scm:git@github.com:java-schema-utilities/relaxng-datatype.git</connection>
-        <developerConnection>scm:git@github.com:java-schema-utilities/relaxng-datatype.git</developerConnection>
+        <connection>scm:git:git@github.com:java-schema-utilities/relaxng-datatype.git</connection>
+        <developerConnection>scm:git:git@github.com:java-schema-utilities/relaxng-datatype.git</developerConnection>
         <url>http://github.com/java-schema-utilities/relaxng-datatype</url>
     </scm>
     <prerequisites>
