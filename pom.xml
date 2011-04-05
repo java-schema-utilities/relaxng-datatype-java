@@ -10,12 +10,12 @@
     <artifactId>relaxngDatatype</artifactId>
     <version>2011.1-SNAPSHOT</version>
     <name>RelaxNG datatype library</name>
-    <url>http://github.com/java-schema-utilities/relaxng-datatype</url>
+    <url>http://github.com/java-schema-utilities/relaxng-datatype-java</url>
     <packaging>jar</packaging>
     <scm>
-        <connection>scm:git:git@github.com:java-schema-utilities/relaxng-datatype.git</connection>
-        <developerConnection>scm:git:git@github.com:java-schema-utilities/relaxng-datatype.git</developerConnection>
-        <url>http://github.com/java-schema-utilities/relaxng-datatype</url>
+        <connection>scm:git:git@github.com:java-schema-utilities/relaxng-datatype-java.git</connection>
+        <developerConnection>scm:git:git@github.com:java-schema-utilities/relaxng-datatype-java.git</developerConnection>
+        <url>http://github.com/java-schema-utilities/relaxng-datatype-java</url>
     </scm>
     <prerequisites>
         <maven>3.0.3</maven>
@@ -23,7 +23,7 @@
     <distributionManagement>
         <site>
             <id>github-project-site</id>
-            <url>gitsite:git@github.com:java-schema-utilities/relaxng-datatype.git</url>
+            <url>gitsite:git@github.com:java-schema-utilities/relaxng-datatype-java.git</url>
         </site>
     </distributionManagement>
     <properties>
