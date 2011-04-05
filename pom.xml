@@ -208,14 +208,6 @@
                         <releaseProfiles>release</releaseProfiles>
                         <preparationGoals>clean install</preparationGoals>
                     </configuration>
-		    <executions>
-		      <execution>
-			<id>default-perform</id>
-			<configuration>
-			  <pomFileName>java/pom.xml</pomFileName>
-			</configuration>
-		      </execution>
-		    </executions>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
